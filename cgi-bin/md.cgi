@@ -47,7 +47,7 @@ def main():
     req_uri = re.sub("[^a-zA-Z0-9\.\/-]", "_", req_uri)
     file = "%s%s" % (root, req_uri)
 
-    cmd = "cat %s%s | /home/jceaser/bin/markdown" % (root, req_uri)
+    cmd = "cat %s%s | ~/bin/markdown" % (root, req_uri)
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
     cOut = ""
     for line in p.stdout.readlines():
